@@ -1,5 +1,6 @@
 package com.example.expenseTracker;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 
 public class ExpenseDTO {
@@ -10,7 +11,7 @@ public class ExpenseDTO {
     private String title;
     private String description;
     private double amount;
-//    private LocalTime date;
+    private LocalDate date;
 
     public int getId() {
         return id;
@@ -60,13 +61,13 @@ public class ExpenseDTO {
         this.amount = amount;
     }
 
-//    public LocalTime getDate() {
-//        return date;
-//    }
-//
-//    public void setDate(LocalTime date) {
-//        this.date = date;
-//    }
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
 
 
 

@@ -3,7 +3,7 @@ package com.example.expenseTracker;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
+@CrossOrigin
 @RestController
 public class ExpenseController {
 //  Constructor Injection or @Autowired annotation used
@@ -28,7 +28,7 @@ public class ExpenseController {
         expense.setTitle(expenseDTO.getTitle());
         expense.setDescription(expenseDTO.getDescription());
         expense.setAmount(expenseDTO.getAmount());
-//        expense.setDate(expenseDTO.getDate());
+        expense.setDate(expenseDTO.getDate());
 
         // Save Repo - Entity pass
         expenseRepo.save(expense);
@@ -48,7 +48,7 @@ public class ExpenseController {
         expenseData.setTitle(expenseDTO.getTitle());
         expenseData.setDescription(expenseDTO.getDescription());
         expenseData.setAmount(expenseDTO.getAmount());
-//        expense.setDate(expenseDTO.getDate());
+        expenseData.setDate(expenseDTO.getDate());
 
         // Save Repo - Entity pass
         expenseRepo.save(expenseData);

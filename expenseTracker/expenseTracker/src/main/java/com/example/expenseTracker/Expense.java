@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+import java.time.LocalDate;
 import java.time.LocalTime;
 
 @Entity
@@ -17,7 +18,7 @@ public class Expense {
     private String title;
     private String description;
     private double amount;
-//    private LocalTime date;
+    private LocalDate date;
 
     public int getId() {
         return id;
@@ -67,13 +68,13 @@ public class Expense {
         this.amount = amount;
     }
 
-//    public LocalTime getDate() {
-//        return date;
-//    }
-//
-//    public void setDate(LocalTime date) {
-//        this.date = date;
-//    }
+    public LocalDate getDate() {
+        return date;
+    }
+
+    public void setDate(LocalDate date) {
+        this.date = date;
+    }
 
     public Expense(){}
 
